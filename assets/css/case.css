@@ -838,7 +838,7 @@
   background: #FBFAF9;
   padding: 24px 24px;
   border: 1px solid var(--line-2);
-  border-radius: 0;
+  border-radius: 10;
 }
 
 .levels__card--modal {
