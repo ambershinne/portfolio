@@ -76,6 +76,22 @@
   padding-top: 0;
 }
 
+/* ===== Visual content max-width ===== */
+/* Constrain large visuals (images, mockups, diagrams) to a comfortable
+   reading width while keeping text bodies at their existing width. */
+.case-cover,
+.case-section > img,
+.problem-grid,
+.explore,
+.ui-frame,
+.ui-caption,
+.uxspec,
+.levels {
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ===== Hero / Overview ===== */
 .case-hero__eyebrow { margin-bottom: 28px; }
 .case-hero__title {
