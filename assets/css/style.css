@@ -329,17 +329,17 @@ img, svg { display: block; max-width: 100%; }
 .nav__brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 7px;
   font-family: var(--font-serif);
   font-weight: 500;
   font-style: italic;
-  font-size: 18px;
-  letter-spacing: -0.03em;
+  font-size: 17px;
+  letter-spacing: -0.05em;
   color: var(--fg);
 }
 .nav__brand img {
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   object-fit: cover;
 }
