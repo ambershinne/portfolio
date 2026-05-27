@@ -84,7 +84,7 @@ body[data-page="work-kindoc-b2c"] .case-logo::after {
     linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
           mask-composite: exclude;
-  animation: caseLogoSpin 3s linear infinite;
+  animation: caseLogoSpin 4s linear infinite;
   pointer-events: none;
 }
 
@@ -501,6 +501,8 @@ body[data-page="work-kindoc-b2c"] .case-hero__mobile img {
   height: auto;
   display: block;
   border-radius: 36px;
+  transform: perspective(1200px) rotateY(-8deg);
+  transform-origin: center;
 }
 
 /* Constrain hero text on desktop so the mockup peeks out on the right */
