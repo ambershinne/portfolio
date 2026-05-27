@@ -14,22 +14,37 @@
    ============================================================ */
 .work-wrap {
   padding: 0 var(--gutter);
-  max-width: 1280px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
-/* Top eyebrow only — no big title */
+/* Top eyebrow + serif subtitle */
 .work-intro {
-  padding: 140px 0 28px;
+  padding: 140px 0 40px;
+  border-bottom: 1px solid var(--line-2);
+}
+.work-intro__eyebrow {
+  margin-bottom: 28px;
+}
+.work-intro__subtitle {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  font-variation-settings: "opsz" 144, "SOFT" 100;
+  font-size: clamp(24px, 2.6vw, 32px);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: var(--fg);
+  margin: 0;
+  max-width: 32ch;
 }
 
-/* Main 35/65 layout */
+/* Main 30/70 layout */
 .work-feed {
   display: grid;
-  grid-template-columns: 35% 1fr;
+  grid-template-columns: 30% 1fr;
   gap: 80px;
-  padding-top: 40px;
-  border-top: 1px solid var(--line-2);
+  padding-top: 48px;
 }
 
 /* LEFT — sticky principles column */
@@ -164,7 +179,6 @@
   line-height: 1.6;
   color: var(--fg-3);
   margin: 0;
-  max-width: 40ch;
 }
 
 .work-strip__hash {
@@ -194,10 +208,23 @@
 }
 
 /* ============================================================
-   MOBILE — Principles become horizontal scroll-snap carousel
+   MEDIUM (769–1279px) — Sidebar stays 30/70, strips stack
    ============================================================ */
-@media (max-width: 1024px) {
-  .work-intro { padding: 120px 0 20px; }
+@media (max-width: 1279px) and (min-width: 769px) {
+  .work-feed { gap: 56px; }
+  .work-strip {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px 0;
+  }
+  .work-strip__hash { padding-top: 16px; }
+}
+
+/* ============================================================
+   MOBILE (≤768px) — Principles horizontal scroll, full stack
+   ============================================================ */
+@media (max-width: 768px) {
+  .work-intro { padding: 100px 0 16px; }
   .work-feed {
     grid-template-columns: 1fr;
     gap: 48px;
@@ -214,6 +241,8 @@
     /* break out of container padding so cards peek edge-to-edge */
     margin: 0 calc(-1 * var(--gutter));
     padding: 0 var(--gutter);
+    /* FIX: first card needs left padding when snapped */
+    scroll-padding-inline: var(--gutter);
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -223,7 +252,6 @@
   .work-pr {
     flex: 0 0 80%;
     scroll-snap-align: start;
-    /* min-height so cards align if body lengths differ */
     min-height: 140px;
   }
   .work-pr__body { max-width: none; }
@@ -232,14 +260,9 @@
   .work-strip {
     grid-template-columns: 1fr;
     gap: 20px;
-    padding: 40px 0;
+    padding: 32px 0;
   }
   .work-strip__hash { padding-top: 16px; }
-}
-
-@media (max-width: 768px) {
-  .work-intro { padding: 100px 0 16px; }
-  .work-strip { padding: 32px 0; }
 }
 </style>
 </head>
@@ -260,14 +283,15 @@
 
 <!-- ============ MAIN ============ -->
 <section class="work-wrap">
-  <!-- Eyebrow only — no big title -->
+  <!-- Eyebrow + serif italic subtitle -->
   <div class="work-intro reveal">
-    <div class="eyebrow">
+    <div class="eyebrow work-intro__eyebrow">
       <span>W/00</span><span class="dash"></span><span>Selected work</span>
     </div>
+    <p class="work-intro__subtitle">How I work, and what it built.</p>
   </div>
 
-  <!-- 35/65 feed: sticky principles + scrolling cases -->
+  <!-- 30/70 feed: sticky principles + scrolling cases -->
   <div class="work-feed">
 
     <!-- LEFT: Sticky principles -->
