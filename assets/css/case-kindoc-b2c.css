@@ -264,7 +264,7 @@ body[data-page="work-kindoc-b2c"] .reference-marquee__track {
   gap: 12px;
   width: max-content;
   align-items: center;
-  animation: refMarquee 70s linear infinite;
+  animation: refMarquee 50s linear infinite;
 }
 
 body[data-page="work-kindoc-b2c"] .reference-marquee__track img {
