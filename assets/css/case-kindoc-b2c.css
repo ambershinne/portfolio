@@ -556,84 +556,21 @@ body[data-page="work-kindoc-b2c"] .outcome-row {
   align-items: stretch;
 }
 
-/* Bar-chart card */
-body[data-page="work-kindoc-b2c"] .barchart {
-  display: flex;
-  flex-direction: column;
-  padding: 22px 22px 20px;
+/* Bar-chart card (image) */
+body[data-page="work-kindoc-b2c"] .barchart-img {
   background: #fff;
   border: 1px solid var(--line-3);
   border-radius: 10px;
-}
-body[data-page="work-kindoc-b2c"] .barchart__title {
-  font-family: 'DM Sans', var(--font-sans);
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--muted);
-  letter-spacing: -0.005em;
-  margin: 0 0 20px;
-}
-body[data-page="work-kindoc-b2c"] .barchart__plot {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  align-items: end;
-  gap: 14px;
-  flex: 1;
-  min-height: 80px;
-  border-bottom: 1px solid var(--line-2);
-  padding-bottom: 0;
-}
-body[data-page="work-kindoc-b2c"] .bar {
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  height: 100%;
-  gap: 8px;
+  justify-content: center;
+  padding: 16px;
 }
-body[data-page="work-kindoc-b2c"] .bar__val {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--muted);
-  letter-spacing: -0.01em;
-  white-space: nowrap;
-}
-body[data-page="work-kindoc-b2c"] .bar.is-peak .bar__val {
-  color: #b5587f;
-  font-weight: 600;
-}
-body[data-page="work-kindoc-b2c"] .bar__fill {
+body[data-page="work-kindoc-b2c"] .barchart-img img {
   width: 100%;
-  max-width: 22px;
-  border-radius: 999px 999px 0 0;
-  background: linear-gradient(180deg, #e0b3c8 0%, #c98aa8 100%);
-  transform-origin: bottom;
-  animation: bar-grow 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-body[data-page="work-kindoc-b2c"] .bar.is-peak .bar__fill {
-  background: linear-gradient(180deg, #d98aae 0%, #b5587f 100%);
-}
-body[data-page="work-kindoc-b2c"] .bar:nth-child(1) .bar__fill { animation-delay: 0ms; }
-body[data-page="work-kindoc-b2c"] .bar:nth-child(2) .bar__fill { animation-delay: 80ms; }
-body[data-page="work-kindoc-b2c"] .bar:nth-child(3) .bar__fill { animation-delay: 160ms; }
-body[data-page="work-kindoc-b2c"] .bar:nth-child(4) .bar__fill { animation-delay: 240ms; }
-@keyframes bar-grow {
-  from { transform: scaleY(0); }
-  to   { transform: scaleY(1); }
-}
-body[data-page="work-kindoc-b2c"] .barchart__labels {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-  margin-top: 10px;
-}
-body[data-page="work-kindoc-b2c"] .barchart__labels span {
-  text-align: center;
-  font-family: 'DM Sans', var(--font-sans);
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--fg-3);
+  height: auto;
+  display: block;
 }
 
 /* Reuse big-stat look inside the row */
