@@ -197,6 +197,22 @@
 }
 .work-strip__hash span { white-space: nowrap; }
 
+/* Coming-soon / in-progress case */
+.work-strip--soon .work-strip__media { cursor: default; position: relative; }
+.work-strip--soon .work-strip__media img { opacity: 0.55; filter: grayscale(0.2); }
+.work-strip__badge {
+  align-self: flex-start;
+  margin-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  padding: 4px 11px;
+}
+
 /* Outro — sits inside .work-strips so the divider line extends to bottom */
 .work-outro {
   padding: 48px 0 80px;
@@ -366,7 +382,7 @@
         <div class="work-strip__media"><img src="assets/images/work-backoffice.png" alt="" /></div>
         <div class="work-strip__body">
           <div class="work-strip__head">
-            <span class="work-strip__num">01 / 05</span>
+            <span class="work-strip__num">01 / 03</span>
             <span class="work-strip__kind">In-house · 2022-25</span>
           </div>
           <h2 class="work-strip__title"><em>From scattered to</em><br />one master system.</h2>
@@ -383,7 +399,7 @@
         <div class="work-strip__media"><img src="assets/images/work-kindocapp.png" alt="" /></div>
         <div class="work-strip__body">
           <div class="work-strip__head">
-            <span class="work-strip__num">02 / 05</span>
+            <span class="work-strip__num">02 / 03</span>
             <span class="work-strip__kind">In-house · 2024</span>
           </div>
           <h2 class="work-strip__title">Booking marketplace, built for <em>conversion</em>.</h2>
@@ -396,59 +412,26 @@
         </div>
       </a>
 
-      <article class="work-strip reveal">
-        <div class="work-strip__media"><img src="assets/images/work-huers.png" alt="" /></div>
-        <div class="work-strip__body">
-          <div class="work-strip__head">
-            <span class="work-strip__num">03 / 05</span>
-            <span class="work-strip__kind">Personal · 2-hr sprint</span>
-          </div>
-          <h2 class="work-strip__title">How fast can <em>one designer</em><br />ship a branded app?</h2>
-          <p class="work-strip__desc">A personal experiment — feeding Claude a brief and seeing how far it goes. A full brand system in 120 minutes.</p>
-          <div class="work-strip__hash">
-            <span>#AI-assisted</span>
-            <span>#2hr-sprint</span>
-            <span>#Brand_System</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="work-strip reveal">
+      <article class="work-strip work-strip--soon reveal">
         <div class="work-strip__media"><img src="assets/images/work-kindocai.png" alt="" /></div>
         <div class="work-strip__body">
           <div class="work-strip__head">
-            <span class="work-strip__num">04 / 05</span>
+            <span class="work-strip__num">03 / 03</span>
             <span class="work-strip__kind">In-house · 2023–24</span>
           </div>
-          <h2 class="work-strip__title">A <em>conversational</em><br />AI design system.</h2>
-          <p class="work-strip__desc">Generative AI health-checkup results assistant — language UX patterns and a token system for AI-generated content.</p>
+          <h2 class="work-strip__title">Designing a chatbot AI<br />for <em>sensitive data</em>.</h2>
+          <p class="work-strip__desc">A conversational AI assistant handling sensitive health information — language UX patterns and a token system for AI-generated content.</p>
           <div class="work-strip__hash">
             <span>#AI_UX</span>
             <span>#Conversational_UI</span>
             <span>#Design_System</span>
           </div>
-        </div>
-      </article>
-
-      <article class="work-strip reveal">
-        <div class="work-strip__media"><img src="assets/images/work-highcapa.png" alt="" /></div>
-        <div class="work-strip__body">
-          <div class="work-strip__head">
-            <span class="work-strip__num">05 / 05</span>
-            <span class="work-strip__kind">Partnership · 2021–22</span>
-          </div>
-          <h2 class="work-strip__title">Enterprise UX,<br /><em>scaled</em>.</h2>
-          <p class="work-strip__desc">External project with a major hospital — enterprise framework, complex workflows, and stakeholder alignment.</p>
-          <div class="work-strip__hash">
-            <span>#Enterprise_Framework</span>
-            <span>#Complex_Workflows</span>
-            <span>#Partnership</span>
-          </div>
+          <span class="work-strip__badge">Case study in progress</span>
         </div>
       </article>
 
       <div class="work-outro">
-        <div class="work-outro__count">05 / 05  ·  More on request</div>
+        <div class="work-outro__count">03 / 03  ·  More on request</div>
       </div>
 
     </div>
