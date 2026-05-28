@@ -126,12 +126,41 @@
     onScroll();
   }
 
+  // ---- 6. Contact dropdown (tap on mobile, click-outside to close) ----
+  function initNavDropdown() {
+    const dropdown = document.querySelector('.nav__dropdown');
+    if (!dropdown) return;
+    const trigger = dropdown.querySelector('.nav__dropdown-trigger');
+    if (!trigger) return;
+
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const open = dropdown.classList.toggle('is-open');
+      trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('is-open');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        dropdown.classList.remove('is-open');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
   // ---- 5. Init ----------------------------------------------
   function init() {
     initReveal();
     initActiveNav();
     initSideToc();
     initFloatNav();
+    initNavDropdown();
     initPageTransitions();
   }
 
